@@ -55,4 +55,4 @@ A full-stack Logistics Customer Relationship Management (CRM) platform built for
 
 ## Author
 
-Shaan Mehta
+Sushaan Mehta
