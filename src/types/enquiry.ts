@@ -41,3 +41,41 @@ export interface PageResponse<T> {
 
     empty: boolean;
 }
+
+export interface CreateEnquiryRequest {
+
+    customerName: string;
+
+    phoneNumber: string;
+
+    email: string;
+
+    cityId: number;
+
+    truckTypeId: number;
+
+    cargoTypeId: number;
+
+    message: string;
+}
+
+export interface City {
+
+    id: number;
+
+    cityName: string;
+}
+
+export interface TruckType {
+
+    id: number;
+
+    truckName: string;
+}
+
+export interface CargoType {
+
+    id: number;
+
+    cargoName: string;
+}

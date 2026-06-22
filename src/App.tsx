@@ -3,10 +3,14 @@ import {
     Route
 } from "react-router-dom";
 
+import HomePage from "./pages/public/HomePage";
+
 import LoginPage from "./pages/login/LoginPage";
+
 import DashboardPage from "./pages/dashboard/DashboardPage";
 import EnquiriesPage from "./pages/enquiries/EnquiriesPage";
 import EnquiryDetailsPage from "./pages/enquiries/EnquiryDetailsPage";
+
 import NotificationsPage from "./pages/notifications/NotificationsPage";
 
 import AdminsPage from "./pages/admins/AdminsPage";
@@ -30,10 +34,17 @@ function App() {
 
         <Routes>
 
-            {/* Public Routes */}
+            {/* PUBLIC WEBSITE */}
 
             <Route
-                path="/login"
+                path="/"
+                element={<HomePage />}
+            />
+
+            {/* ADMIN LOGIN */}
+
+            <Route
+                path="/secure-admin/login"
                 element={<LoginPage />}
             />
 
@@ -42,7 +53,7 @@ function App() {
                 element={<ForbiddenPage />}
             />
 
-            {/* Protected Routes */}
+            {/* CRM */}
 
             <Route
                 element={
@@ -71,8 +82,6 @@ function App() {
                     path="/notifications"
                     element={<NotificationsPage />}
                 />
-
-                {/* Super Admin Routes */}
 
                 <Route
                     path="/admins"
@@ -121,11 +130,13 @@ function App() {
 
             </Route>
 
-            {/* 404 Route */}
-
             <Route
                 path="*"
                 element={<NotFoundPage />}
+            />
+            <Route
+                path="/login"
+                element={<HomePage />}
             />
 
         </Routes>
