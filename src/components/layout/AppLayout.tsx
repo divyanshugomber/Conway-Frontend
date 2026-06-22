@@ -57,7 +57,9 @@ function AppLayout() {
 
             logout();
 
-            navigate("/login");
+            navigate(
+    "/secure-admin/login"
+);
         };
 
     const isActive =
